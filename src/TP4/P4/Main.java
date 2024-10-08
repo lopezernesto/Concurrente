@@ -15,14 +15,14 @@ public class Main {
         }
 
         GestorImpresora g = new GestorImpresora(arreglo);
-        Persona p = new Persona(g, cant);
-        Persona n = new Persona(g, cant);
-        Persona q = new Persona(g, cant);
+        Persona p1 = new Persona(g, cant);
+        Persona p2 = new Persona(g, cant);
+        Persona p3 = new Persona(g, cant);
         Thread[] personas = new Thread[3];
 
-        personas[0] = new Thread(p, "Agustin");
-        personas[1] = new Thread(n, "Facundo");
-        personas[2] = new Thread(q, "Nicolas");
+        personas[0] = new Thread(p1, "Agustin");
+        personas[1] = new Thread(p2, "Facundo");
+        personas[2] = new Thread(p3, "Nicolas");
         for (int i = 0; i < personas.length; i++) {
             personas[i].start();
         }

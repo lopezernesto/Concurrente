@@ -19,7 +19,8 @@ public class Persona implements Runnable {
             // Si lo parto, tengo que saber en que impresora imprimio, para no liberar otra
             g.imprimir(imp);
             try {
-                Thread.sleep(300);
+                System.out.println("va a ir a dormir: " + Thread.currentThread().getName());
+                Thread.sleep(3000);
             } catch (Exception e) {
                 // TODO: handle exception
             }
