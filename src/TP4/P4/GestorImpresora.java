@@ -11,7 +11,7 @@ public class GestorImpresora {
     }
 
     public void imprimir(int impresora) {
-        System.out.println("intenta imprimir " + Thread.currentThread().getName());
+        System.out.println("entro a la fotocopiadora" + Thread.currentThread().getName());
         try {
             mutex.acquire();
         } catch (Exception e) {
@@ -27,6 +27,7 @@ public class GestorImpresora {
     public void terminarImprimir(int impresora) {
         if (imp[impresora].getEstado().equals("ocupado")) {
             imp[impresora].terminarImprimir();
+            System.out.println(Thread.currentThread().getName() + " salio de la impresora");
             mutex.release();
         } else {
             System.out.println("La impresora " + impresora + " ya esta liberada " + Thread.currentThread().getName());

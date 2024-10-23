@@ -20,7 +20,7 @@ public class Persona implements Runnable {
             g.imprimir(imp);
             try {
                 System.out.println("va a ir a dormir: " + Thread.currentThread().getName());
-                Thread.sleep(3000);
+                Thread.sleep(300);
             } catch (Exception e) {
                 // TODO: handle exception
             }
